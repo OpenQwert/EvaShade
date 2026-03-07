@@ -31,14 +31,14 @@
                     },
                     colors: {
                         primary: {
-                            DEFAULT: '#D4AF37',  // Gold
-                            light: '#F4E4BC',    // Champagne
-                            dark: '#C9A961',     // Dark Gold
+                            DEFAULT: '#ffffff',  // White
+                            light: '#f9fafb',    // Gray 50
+                            dark: '#d1d5db',     // Gray 300
                         },
                         accent: {
-                            DEFAULT: '#C9A961',  // Muted Gold
-                            light: '#E5D4A1',    // Light Gold
-                            dark: '#B8962E',     // Bronze
+                            DEFAULT: '#10B981',  // Emerald 500 (Green)
+                            light: '#34D399',    // Emerald 400
+                            dark: '#059669',     // Emerald 600
                         },
                         background: {
                             primary: '#000000',   // 纯黑背景
@@ -99,7 +99,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: linear-gradient(180deg, #D4AF37 0%, #333333 100%);
+            background: linear-gradient(180deg, #ffffff 0%, #333333 100%);
         }
 
         @media (min-width: 768px) {
@@ -119,9 +119,9 @@
             font-family: 'Noto Sans SC', 'Inter', system-ui, sans-serif;
         }
 
-        /* Black-Gold Gradient Text */
+        /* Minimalist Gradient Text - White to Gray */
         .gradient-text {
-            background: linear-gradient(135deg, #F4E4BC 0%, #D4AF37 50%, #C9A961 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #d1d5db 100%);
             background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -129,7 +129,7 @@
             animation: gradient 8s linear infinite;
         }
 
-        /* Gold Glow Effect */
+        /* Green Accent Glow Effect */
         .glow-effect {
             position: relative;
         }
@@ -138,7 +138,7 @@
             content: '';
             position: absolute;
             inset: -2px;
-            background: linear-gradient(135deg, #F4E4BC, #D4AF37, #C9A961);
+            background: linear-gradient(135deg, #10B981, #059669);
             border-radius: inherit;
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -146,36 +146,36 @@
         }
 
         .glow-effect:hover::before {
-            opacity: 0.6;
+            opacity: 0.4;
         }
 
-        /* Black-Gold Card Style */
+        /* Minimalist Card Style - Black with Subtle Border */
         .card-novix {
             background: linear-gradient(135deg, rgba(17, 17, 17, 0.9), rgba(10, 10, 10, 0.95));
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .card-novix:hover {
-            border-color: rgba(212, 175, 55, 0.4);
-            box-shadow: 0 20px 40px -15px rgba(212, 175, 55, 0.25);
+            border-color: rgba(16, 185, 129, 0.2);
+            box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.1);
             transform: translateY(-4px);
         }
 
-        /* Golden Background Glow */
+        /* Subtle Background Glow */
         .bg-glow {
             position: absolute;
             width: 600px;
             height: 600px;
-            background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.04) 0%, transparent 70%);
             top: -300px;
             left: 50%;
             transform: translateX(-50%);
             pointer-events: none;
         }
 
-        /* Gold Border Shimmer Effect */
+        /* Green Border Shimmer Effect */
         .gold-border {
             position: relative;
             overflow: hidden;
@@ -191,7 +191,7 @@
             background: linear-gradient(
                 90deg,
                 transparent,
-                rgba(212, 175, 55, 0.3),
+                rgba(16, 185, 129, 0.15),
                 transparent
             );
             transition: left 0.5s;
@@ -210,10 +210,10 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <a href="#home" class="flex items-center space-x-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/25 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-leaf text-white text-lg"></i>
+                    <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center border border-accent/20 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-leaf text-accent text-lg"></i>
                     </div>
-                    <span class="font-bold text-xl font-serif bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">EvaShade</span>
+                    <span class="font-bold text-xl font-serif text-white">EvaShade</span>
                 </a>
 
                 <!-- Desktop Navigation -->
@@ -303,7 +303,7 @@
             <div class="max-w-4xl mx-auto text-center">
                 <!-- Badge -->
                 <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm mb-8">
-                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
                     <span class="text-gray-400">
                         <span class="lang-en">Open Collaboration · Scientific Research</span>
                         <span class="lang-zh">开源协作 · 科学研究</span>
@@ -318,19 +318,19 @@
                 <!-- Subtitle -->
                 <p class="text-xl md:text-2xl text-gray-400 mb-6 font-light">
                     <span class="lang-en">
-                        <span class="text-white font-semibold gradient-text">Evapotranspiration</span>
+                        <span class="text-white font-semibold">Evapotranspiration</span>
                         <span class="mx-2">+</span>
-                        <span class="text-white font-semibold gradient-text">Shade</span>
+                        <span class="text-white font-semibold">Shade</span>
                     </span>
                     <span class="lang-zh">
-                        <span class="text-white font-semibold gradient-text">蒸散发</span>
+                        <span class="text-white font-semibold">蒸散发</span>
                         <span class="mx-2">+</span>
-                        <span class="text-white font-semibold gradient-text">遮荫</span>
+                        <span class="text-white font-semibold">遮荫</span>
                     </span>
                 </p>
 
                 <!-- Description -->
-                <p class="text-lg md:text-xl text-gray-500 mb-12 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
                     <span class="lang-en">
                         Quantifying the independent contributions of evapotranspiration and shade to urban cooling through precise experimental measurements and data analysis.
                     </span>
@@ -341,7 +341,7 @@
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#progress" class="group glow-effect inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">
+                    <a href="#progress" class="group glow-effect inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/20">
                         <span class="lang-en">View Progress</span>
                         <span class="lang-zh">查看进度</span>
                         <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
@@ -371,7 +371,7 @@
                     <span class="lang-en">Research Overview</span>
                     <span class="lang-zh">研究概况</span>
                 </h2>
-                <p class="text-xl text-gray-500 max-w-2xl mx-auto">
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
                     <span class="lang-en">Isolating vegetation cooling mechanisms through controlled comparative experiments</span>
                     <span class="lang-zh">通过对照实验分离植被降温的两个关键机制</span>
                 </p>
@@ -387,7 +387,7 @@
                         <span class="lang-en">Control Group</span>
                         <span class="lang-zh">对照组</span>
                     </h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
+                    <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                         <span class="lang-en">Open area, no shade, no vegetation</span>
                         <span class="lang-zh">裸露空地，无遮荫无植被，建立温度基准</span>
                     </p>
@@ -395,14 +395,14 @@
 
                 <!-- Shade Only -->
                 <div class="card-novix rounded-2xl p-8 group">
-                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-primary/20">
-                        <i class="fas fa-umbrella-beach text-primary text-2xl"></i>
+                    <div class="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-white/10">
+                        <i class="fas fa-umbrella-beach text-gray-400 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-white">
                         <span class="lang-en">Shade Only</span>
                         <span class="lang-zh">遮荫组</span>
                     </h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
+                    <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                         <span class="lang-en">Artificial shade structure, no evapotranspiration</span>
                         <span class="lang-zh">人工遮荫结构，纯物理阻挡太阳辐射</span>
                     </p>
@@ -410,14 +410,14 @@
 
                 <!-- ET Only -->
                 <div class="card-novix rounded-2xl p-8 group">
-                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-accent/10 to-accent/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-accent/20">
+                    <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-accent/20">
                         <i class="fas fa-seedling text-accent text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-white">
                         <span class="lang-en">ET Only</span>
                         <span class="lang-zh">蒸散发组</span>
                     </h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
+                    <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                         <span class="lang-en">Irrigated ground cover, no overhead shade</span>
                         <span class="lang-zh">灌溉地被，纯蒸腾降温效应测量</span>
                     </p>
@@ -425,16 +425,16 @@
 
                 <!-- Combined -->
                 <div class="card-novix rounded-2xl p-8 group relative overflow-hidden gold-border">
-                    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute inset-0 bg-accent/5 opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="relative z-10">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border-2 border-primary/30">
-                            <i class="fas fa-tree text-primary text-2xl"></i>
+                        <div class="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border-2 border-accent/30">
+                            <i class="fas fa-tree text-accent text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3 gradient-text">
+                        <h3 class="text-xl font-semibold mb-3 text-white">
                             <span class="lang-en">Combined</span>
                             <span class="lang-zh">综合组</span>
                         </h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">
+                        <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                             <span class="lang-en">Living vegetation with both mechanisms</span>
                             <span class="lang-zh">活体植被，遮荫+蒸散发总效应</span>
                         </p>
@@ -450,27 +450,27 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Metric 1 -->
                 <div class="text-center p-8">
-                    <div class="text-6xl md:text-7xl font-bold gradient-text mb-4">2-5°C</div>
-                    <div class="text-gray-500 text-lg">
+                    <div class="text-6xl md:text-7xl font-bold text-white mb-4">2-5°C</div>
+                    <div class="text-gray-800 dark:text-gray-300 text-lg">
                         <span class="lang-en">Total vegetation cooling (expected)</span>
                         <span class="lang-zh">植被综合降温幅度（预期）</span>
                     </div>
                 </div>
                 <!-- Metric 2 -->
                 <div class="text-center p-8">
-                    <div class="text-6xl md:text-7xl font-bold gradient-text mb-4">60-80%</div>
-                    <div class="text-gray-500 text-lg">
+                    <div class="text-6xl md:text-7xl font-bold text-white mb-4">60-80%</div>
+                    <div class="text-gray-800 dark:text-gray-300 text-lg">
                         <span class="lang-en">ET contribution ratio (expected)</span>
                         <span class="lang-zh">蒸散发贡献比例（预期）</span>
                     </div>
                 </div>
                 <!-- Metric 3 -->
                 <div class="text-center p-8">
-                    <div class="text-6xl md:text-7xl font-bold gradient-text mb-4">
+                    <div class="text-6xl md:text-7xl font-bold text-white mb-4">
                         <span class="lang-en">12 weeks</span>
                         <span class="lang-zh">12周</span>
                     </div>
-                    <div class="text-gray-500 text-lg">
+                    <div class="text-gray-800 dark:text-gray-300 text-lg">
                         <span class="lang-en">Complete experimental cycle</span>
                         <span class="lang-zh">完整实验周期</span>
                     </div>
@@ -487,7 +487,7 @@
                     <span class="lang-en">Project Progress</span>
                     <span class="lang-zh">项目进度</span>
                 </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400">
+                <p class="text-lg text-gray-900 dark:text-gray-200">
                     <span class="lang-en">Real-time monitoring of research progress</span>
                     <span class="lang-zh">实时监控研究进展，确保项目按计划推进</span>
                 </p>
@@ -495,12 +495,12 @@
 
             <!-- Overall Progress -->
             <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 mb-8">
-                <h3 class="text-xl font-semibold mb-4">
+                <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
                     <span class="lang-en">Overall Progress</span>
                     <span class="lang-zh">总体进度</span>
                 </h3>
                 <div class="flex items-center justify-between mb-4">
-                    <span class="text-gray-600 dark:text-gray-400">
+                    <span class="text-gray-900 dark:text-gray-200">
                         <span class="lang-en">Current Phase</span>
                         <span class="lang-zh">当前阶段</span>
                     </span>
@@ -510,14 +510,14 @@
                     </span>
                 </div>
                 <div class="flex items-center justify-between mb-2">
-                    <span class="text-gray-600 dark:text-gray-400">
+                    <span class="text-gray-900 dark:text-gray-200">
                         <span class="lang-en">Completion</span>
                         <span class="lang-zh">完成度</span>
                     </span>
-                    <span class="text-2xl font-bold text-primary-600">28%</span>
+                    <span class="text-2xl font-bold text-white">28%</span>
                 </div>
                 <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                    <div class="bg-primary-600 h-3 rounded-full progress-bar" style="width: 28%"></div>
+                    <div class="bg-accent h-3 rounded-full progress-bar" style="width: 28%"></div>
                 </div>
             </div>
 
@@ -536,19 +536,19 @@
                                 <span class="lang-en">Completed</span>
                                 <span class="lang-zh">已完成</span>
                             </span>
-                            <span class="text-sm text-gray-500">2024-01-15</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-300">2024-01-15</span>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2">
+                        <h4 class="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
                             <span class="lang-en">Experimental Design & Validation</span>
                             <span class="lang-zh">实验方案设计与论证</span>
                         </h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                        <p class="text-gray-900 dark:text-gray-200 text-sm mb-4">
                             <span class="lang-en">Completed four-group comparative experimental design, determined sensor selection, site layout, and data acquisition protocols</span>
                             <span class="lang-zh">完成四组对照实验设计，确定传感器选型、场地布局和数据采集方案</span>
                         </p>
                         <div class="space-y-2">
                             <div class="flex items-center justify-between text-sm">
-                                <span class="text-gray-500">
+                                <span class="text-gray-900 dark:text-gray-200">
                                     <span class="lang-en">Progress</span>
                                     <span class="lang-zh">完成度</span>
                                 </span>
@@ -572,19 +572,19 @@
                                 <span class="lang-en">In Progress</span>
                                 <span class="lang-zh">进行中</span>
                             </span>
-                            <span class="text-sm text-gray-500">2024-01-20</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-300">2024-01-20</span>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2">
+                        <h4 class="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
                             <span class="lang-en">Equipment Procurement & Preparation</span>
                             <span class="lang-zh">设备采购与准备</span>
                         </h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                        <p class="text-gray-900 dark:text-gray-200 text-sm mb-4">
                             <span class="lang-en">BME280 temperature/humidity sensors, ESP32 development boards, radiation shields, and other equipment procurement and acceptance</span>
                             <span class="lang-zh">BME280温湿度传感器、ESP32开发板、防辐射罩等设备采购与验收</span>
                         </p>
                         <div class="space-y-2">
                             <div class="flex items-center justify-between text-sm">
-                                <span class="text-gray-500">
+                                <span class="text-gray-900 dark:text-gray-200">
                                     <span class="lang-en">Progress</span>
                                     <span class="lang-zh">完成度</span>
                                 </span>
@@ -608,19 +608,19 @@
                                 <span class="lang-en">Planned</span>
                                 <span class="lang-zh">计划中</span>
                             </span>
-                            <span class="text-sm text-gray-500">2024-02-01</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-300">2024-02-01</span>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2">
+                        <h4 class="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
                             <span class="lang-en">Site Preparation & Setup</span>
                             <span class="lang-zh">场地准备与布置</span>
                         </h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                        <p class="text-gray-900 dark:text-gray-200 text-sm mb-4">
                             <span class="lang-en">15m×15m experimental site clearance, four-group area division, shade structure construction, and vegetation planting</span>
                             <span class="lang-zh">15m×15m实验场地清理，四组对照区域划分，遮荫结构与植被种植</span>
                         </p>
                         <div class="space-y-2">
                             <div class="flex items-center justify-between text-sm">
-                                <span class="text-gray-500">
+                                <span class="text-gray-900 dark:text-gray-200">
                                     <span class="lang-en">Progress</span>
                                     <span class="lang-zh">完成度</span>
                                 </span>
@@ -640,11 +640,11 @@
     <section id="analytics" class="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
         <div class="container mx-auto px-4">
             <div class="mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
                     <span class="lang-en">Data Analytics</span>
                     <span class="lang-zh">数据分析</span>
                 </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400">
+                <p class="text-lg text-gray-900 dark:text-gray-200">
                     <span class="lang-en">Visual analysis of experimental data</span>
                     <span class="lang-zh">实验数据的可视化展示与分析</span>
                 </p>
@@ -653,45 +653,45 @@
             <!-- Key Metrics Cards -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
                 <div class="bg-white dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-                    <div class="text-gray-500 text-sm mb-2">
+                    <div class="text-gray-700 dark:text-gray-300 text-sm mb-2">
                         <span class="lang-en">Max Cooling Effect</span>
                         <span class="lang-zh">最大降温幅度</span>
                     </div>
                     <div class="text-3xl font-bold text-green-600">6.5°C</div>
-                    <div class="text-xs text-gray-500 mt-1">
+                    <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         <span class="lang-en">vs control group</span>
                         <span class="lang-zh">较对照组温度降低</span>
                     </div>
                 </div>
                 <div class="bg-white dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-                    <div class="text-gray-500 text-sm mb-2">
+                    <div class="text-gray-700 dark:text-gray-300 text-sm mb-2">
                         <span class="lang-en">ET Contribution</span>
                         <span class="lang-zh">蒸散发贡献</span>
                     </div>
                     <div class="text-3xl font-bold text-blue-600">76%</div>
-                    <div class="text-xs text-gray-500 mt-1">
+                    <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         <span class="lang-en">Of total cooling</span>
                         <span class="lang-zh">总降温效应占比</span>
                     </div>
                 </div>
                 <div class="bg-white dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-                    <div class="text-gray-500 text-sm mb-2">
+                    <div class="text-gray-700 dark:text-gray-300 text-sm mb-2">
                         <span class="lang-en">Valid Data Days</span>
                         <span class="lang-zh">有效数据天数</span>
                     </div>
-                    <div class="text-3xl font-bold">5<span class="text-lg text-gray-500">/7</span></div>
-                    <div class="text-xs text-gray-500 mt-1">
+                    <div class="text-3xl font-bold text-purple-600 dark:text-purple-400">5<span class="text-lg">/7</span></div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         <span class="lang-en">Meeting conditions</span>
                         <span class="lang-zh">符合实验条件</span>
                     </div>
                 </div>
                 <div class="bg-white dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-                    <div class="text-gray-500 text-sm mb-2">
+                    <div class="text-gray-700 dark:text-gray-300 text-sm mb-2">
                         <span class="lang-en">Data Integrity</span>
                         <span class="lang-zh">数据完整性</span>
                     </div>
-                    <div class="text-3xl font-bold text-primary-600">98.2%</div>
-                    <div class="text-xs text-gray-500 mt-1">
+                    <div class="text-3xl font-bold text-red-600 dark:text-red-400">98.2%</div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         <span class="lang-en">Sensor operation normal</span>
                         <span class="lang-zh">传感器正常运行</span>
                     </div>
@@ -700,7 +700,7 @@
 
             <!-- Summary Stats (Compact) -->
             <div class="bg-white dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-                <h3 class="text-xl font-semibold mb-6">
+                <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-gray-100">
                     <span class="lang-en">Temperature Comparison (Peak Hours)</span>
                     <span class="lang-zh">温度对比（峰值时段）</span>
                 </h3>
@@ -708,13 +708,13 @@
                 <!-- Compact Bar Visualization -->
                 <div class="space-y-4">
                     <!-- Time Row -->
-                    <div class="flex items-center gap-2 text-sm text-gray-500 pb-2 border-b">
+                    <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 pb-2 border-b">
                         <span class="w-20"></span>
                         <div class="flex-1 grid grid-cols-4 gap-2 text-center font-medium">
                             <span>12:00</span>
                             <span>14:00</span>
                             <span>16:00</span>
-                            <span class="text-gray-400">Avg</span>
+                            <span class="text-gray-500 dark:text-gray-400">Avg</span>
                         </div>
                     </div>
 
@@ -812,21 +812,21 @@
                     <div class="grid grid-cols-3 gap-4 text-center">
                         <div>
                             <div class="text-2xl font-bold text-blue-600">3.3°</div>
-                            <div class="text-xs text-gray-500">
+                            <div class="text-xs text-gray-500 dark:text-gray-400">
                                 <span class="lang-en">Shade Cooling</span>
                                 <span class="lang-zh">遮荫降温</span>
                             </div>
                         </div>
                         <div>
                             <div class="text-2xl font-bold text-green-600">5.4°</div>
-                            <div class="text-xs text-gray-500">
+                            <div class="text-xs text-gray-500 dark:text-gray-400">
                                 <span class="lang-en">ET Cooling</span>
                                 <span class="lang-zh">蒸散发降温</span>
                             </div>
                         </div>
                         <div>
                             <div class="text-2xl font-bold text-purple-600">9.1°</div>
-                            <div class="text-xs text-gray-500">
+                            <div class="text-xs text-gray-500 dark:text-gray-400">
                                 <span class="lang-en">Total Cooling</span>
                                 <span class="lang-zh">总降温</span>
                             </div>
@@ -837,7 +837,7 @@
 
             <!-- Cooling Effect Pie Chart (Smaller) -->
             <div class="bg-white dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-                <h3 class="text-xl font-semibold mb-4">
+                <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
                     <span class="lang-en">Cooling Mechanism Decomposition</span>
                     <span class="lang-zh">降温机制贡献分解</span>
                 </h3>
@@ -856,7 +856,7 @@
                                     <span class="lang-en">Shade</span>
                                     <span class="lang-zh">遮荫</span>
                                 </div>
-                                <div class="text-xs text-gray-500">36%</div>
+                                <div class="text-xs text-gray-500 dark:text-gray-400">36%</div>
                             </div>
                         </div>
                         <div class="flex items-center gap-2">
@@ -866,7 +866,7 @@
                                     <span class="lang-en">Evapotranspiration</span>
                                     <span class="lang-zh">蒸散发</span>
                                 </div>
-                                <div class="text-xs text-gray-500">59%</div>
+                                <div class="text-xs text-gray-500 dark:text-gray-400">59%</div>
                             </div>
                         </div>
                         <div class="flex items-center gap-2">
@@ -876,7 +876,7 @@
                                     <span class="lang-en">Interaction</span>
                                     <span class="lang-zh">交互</span>
                                 </div>
-                                <div class="text-xs text-gray-500">5%</div>
+                                <div class="text-xs text-gray-500 dark:text-gray-400">5%</div>
                             </div>
                         </div>
                     </div>
@@ -884,28 +884,28 @@
             </div>
 
             <!-- Key Findings -->
-            <div class="mt-8 bg-primary-50 dark:bg-primary-900/20 rounded-lg p-6 border border-primary-200 dark:border-primary-800">
-                <h3 class="text-xl font-semibold mb-4">
+            <div class="mt-8 bg-accent/5 dark:bg-accent/10 rounded-lg p-6 border border-accent/20">
+                <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
                     <span class="lang-en">Key Findings</span>
                     <span class="lang-zh">关键发现</span>
                 </h3>
-                <div class="space-y-3 text-sm">
+                <div class="space-y-3 text-sm text-gray-900 dark:text-gray-200">
                     <div class="flex items-start gap-3">
-                        <i class="fas fa-check-circle text-green-600 mt-0.5"></i>
+                        <i class="fas fa-check-circle text-accent mt-0.5"></i>
                         <div>
-                            <p class="lang-en"><span class="font-semibold">Peak Cooling:</span> At 14:00, combined group is <span class="font-bold text-green-600">9.7°C</span> cooler than control</p>
-                            <p class="lang-zh"><span class="font-semibold">峰值降温：</span>14:00时综合组较对照组温度低 <span class="font-bold text-green-600">9.7°C</span></p>
+                            <p class="lang-en"><span class="font-semibold">Peak Cooling:</span> At 14:00, combined group is <span class="font-bold text-accent">9.7°C</span> cooler than control</p>
+                            <p class="lang-zh"><span class="font-semibold">峰值降温：</span>14:00时综合组较对照组温度低 <span class="font-bold text-accent">9.7°C</span></p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <i class="fas fa-check-circle text-green-600 mt-0.5"></i>
+                        <i class="fas fa-check-circle text-accent mt-0.5"></i>
                         <div>
-                            <p class="lang-en"><span class="font-semibold">ET Dominance:</span> ET group provides additional <span class="font-bold text-blue-600">2.5°C</span> cooling vs shade group</p>
-                            <p class="lang-zh"><span class="font-semibold">蒸散发主导：</span>蒸散发组比遮荫组额外降温 <span class="font-bold text-blue-600">2.5°C</span></p>
+                            <p class="lang-en"><span class="font-semibold">ET Dominance:</span> ET group provides additional <span class="font-bold text-accent">2.5°C</span> cooling vs shade group</p>
+                            <p class="lang-zh"><span class="font-semibold">蒸散发主导：</span>蒸散发组比遮荫组额外降温 <span class="font-bold text-accent">2.5°C</span></p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <i class="fas fa-check-circle text-green-600 mt-0.5"></i>
+                        <i class="fas fa-check-circle text-accent mt-0.5"></i>
                         <div>
                             <p class="lang-en"><span class="font-semibold">Synergistic Effect:</span> Combined cooling ≈ shade + ET (9.7 ≈ 4.0 + 5.2)</p>
                             <p class="lang-zh"><span class="font-semibold">协同效应：</span>综合组降温幅度接近遮荫与蒸散发效应之和（9.7 ≈ 4.0 + 5.2）</p>
@@ -920,68 +920,68 @@
     <section id="outreach" class="py-16 md:py-24 bg-white dark:bg-gray-900">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <span class="inline-block px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium mb-4">
+                <span class="inline-block px-4 py-2 bg-accent/10 dark:bg-accent/20 text-accent rounded-full text-sm font-medium mb-4">
                     <span class="lang-en">Research Overview</span>
                     <span class="lang-zh">科普展示</span>
                 </span>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
                     <span class="lang-en">Understanding EvaShade</span>
                     <span class="lang-zh">了解 EvaShade 的奥秘</span>
                 </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                <p class="text-lg text-gray-900 dark:text-gray-200 max-w-2xl mx-auto">
                     <span class="lang-en">Exploring the mysteries of urban vegetation cooling mechanisms</span>
                     <span class="lang-zh">探索城市植被降温机制的奥秘</span>
                 </p>
             </div>
 
             <!-- Core Concept -->
-            <div class="bg-primary-50 dark:bg-primary-900/20 rounded-xl p-8 mb-12 border border-primary-200 dark:border-primary-800">
-                <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
-                    <i class="fas fa-lightbulb text-primary-600"></i>
+            <div class="bg-accent/5 dark:bg-accent/10 rounded-xl p-8 mb-12 border border-accent/20">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-2 text-gray-900 dark:text-gray-100">
+                    <i class="fas fa-lightbulb text-accent"></i>
                     <span class="lang-en">What is Evapotranspiration?</span>
                     <span class="lang-zh">什么是蒸散发？</span>
                 </h3>
-                <p class="text-lg mb-6">
+                <p class="text-lg mb-6 text-gray-900 dark:text-gray-200">
                     <span class="lang-en">
-                        <span class="font-semibold text-primary-600">Evapotranspiration (ET)</span> is the process by which water is transferred from the land to the atmosphere by evaporation from the soil and other surfaces and by transpiration from plants.
+                        <span class="font-semibold text-accent">Evapotranspiration (ET)</span> is the process by which water is transferred from the land to the atmosphere by evaporation from the soil and other surfaces and by transpiration from plants.
                     </span>
                     <span class="lang-zh">
-                        <span class="font-semibold text-primary-600">蒸散发（ET）</span> 是指水分从陆地表面蒸发到大气中的过程
+                        <span class="font-semibold text-accent">蒸散发（ET）</span> 是指水分从陆地表面蒸发到大气中的过程
                     </span>
                 </p>
                 <div class="grid md:grid-cols-2 gap-4 mb-6">
                     <div class="bg-white dark:bg-gray-800 rounded-lg p-4">
                         <div class="text-2xl mb-2">🌱</div>
-                        <h4 class="font-semibold mb-2">
+                        <h4 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">
                             <span class="lang-en">Plant Transpiration</span>
                             <span class="lang-zh">植物蒸腾</span>
                         </h4>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                        <p class="text-sm text-gray-800 dark:text-gray-200">
                             <span class="lang-en">Plants absorb water through roots, transport it through stems, and release it as vapor through leaf stomata</span>
                             <span class="lang-zh">植物通过根系吸收水分，经过茎秆传输，最终通过叶片气孔释放水蒸气</span>
                         </p>
                     </div>
                     <div class="bg-white dark:bg-gray-800 rounded-lg p-4">
                         <div class="text-2xl mb-2">💧</div>
-                        <h4 class="font-semibold mb-2">
+                        <h4 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">
                             <span class="lang-en">Soil Evaporation</span>
                             <span class="lang-zh">土壤蒸发</span>
                         </h4>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                        <p class="text-sm text-gray-800 dark:text-gray-200">
                             <span class="lang-en">Direct evaporation of soil moisture into the air, influenced by temperature, humidity, and wind speed</span>
                             <span class="lang-zh">土壤表面的水分直接蒸发到空气中</span>
                         </p>
                     </div>
                 </div>
-                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border-2 border-blue-200 dark:border-blue-800">
-                    <p class="font-medium">
+                <div class="bg-accent/5 dark:bg-accent/10 rounded-lg p-4 border border-accent/30">
+                    <p class="font-medium text-gray-900 dark:text-gray-200">
                         <span class="lang-en">
-                            🌡️ <span class="text-primary-600">Cooling Principle:</span>
+                            🌡️ <span class="text-accent">Cooling Principle:</span>
                             Water phase change (liquid → gas) requires heat absorption (latent heat of vaporization ~2450 kJ/kg).
                             When plants transpire, this heat is absorbed from the surrounding environment, lowering air temperature.
                         </span>
                         <span class="lang-zh">
-                            🌡️ <span class="text-primary-600">降温原理：</span>
+                            🌡️ <span class="text-accent">降温原理：</span>
                             水分从液态变为气态需要吸收热量（汽化潜热，约2450 kJ/kg）。
                             当植物蒸腾时，这部分热量从周围环境中吸收，从而降低空气温度。
                         </span>
@@ -993,87 +993,87 @@
             <div class="grid md:grid-cols-3 gap-6 mb-12">
                 <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 card-hover">
                     <div class="text-4xl mb-4">🏙️</div>
-                    <h4 class="text-xl font-semibold mb-3">
+                    <h4 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">
                         <span class="lang-en">Urban Heat Island</span>
                         <span class="lang-zh">城市热岛效应</span>
                     </h4>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                    <p class="text-gray-900 dark:text-gray-200 text-sm mb-4">
                         <span class="lang-en">Urban areas are 1-5°C warmer than surrounding rural areas, potentially reaching 10°C under extreme conditions</span>
                         <span class="lang-zh">城市地区温度比周围郊区高 1-5°C，极端情况下甚至高出 10°C</span>
                     </p>
                     <ul class="space-y-2 text-sm">
                         <li class="flex items-center gap-2">
-                            <i class="fas fa-circle text-primary-600 text-xs"></i>
-                            <span class="lang-en">Increased AC demand</span>
-                            <span class="lang-zh">增加空调用电需求</span>
+                            <i class="fas fa-circle text-gray-800 dark:text-gray-300 text-xs"></i>
+                            <span class="lang-en text-gray-900 dark:text-gray-200">Increased AC demand</span>
+                            <span class="lang-zh text-gray-900 dark:text-gray-200">增加空调用电需求</span>
                         </li>
                         <li class="flex items-center gap-2">
-                            <i class="fas fa-circle text-primary-600 text-xs"></i>
-                            <span class="lang-en">Worse air quality</span>
-                            <span class="lang-zh">加剧空气污染</span>
+                            <i class="fas fa-circle text-gray-800 dark:text-gray-300 text-xs"></i>
+                            <span class="lang-en text-gray-900 dark:text-gray-200">Worse air quality</span>
+                            <span class="lang-zh text-gray-900 dark:text-gray-200">加剧空气污染</span>
                         </li>
                         <li class="flex items-center gap-2">
-                            <i class="fas fa-circle text-primary-600 text-xs"></i>
-                            <span class="lang-en">Health risks</span>
-                            <span class="lang-zh">威胁居民健康</span>
+                            <i class="fas fa-circle text-gray-800 dark:text-gray-300 text-xs"></i>
+                            <span class="lang-en text-gray-900 dark:text-gray-200">Health risks</span>
+                            <span class="lang-zh text-gray-900 dark:text-gray-200">威胁居民健康</span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 card-hover">
                     <div class="text-4xl mb-4">🌳</div>
-                    <h4 class="text-xl font-semibold mb-3">
+                    <h4 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">
                         <span class="lang-en">Nature's Solution</span>
                         <span class="lang-zh">植被的解决方案</span>
                     </h4>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                    <p class="text-gray-900 dark:text-gray-200 text-sm mb-4">
                         <span class="lang-en">Vegetation cools cities through shade and evapotranspiration—a natural and sustainable approach</span>
                         <span class="lang-zh">植被通过遮荫和蒸散发降低城市温度——自然且可持续的方式</span>
                     </p>
                     <ul class="space-y-2 text-sm">
                         <li class="flex items-center gap-2">
                             <i class="fas fa-circle text-green-500 text-xs"></i>
-                            <span class="lang-en">Lower energy use</span>
-                            <span class="lang-zh">降低建筑制冷能耗</span>
+                            <span class="lang-en text-gray-900 dark:text-gray-200">Lower energy use</span>
+                            <span class="lang-zh text-gray-900 dark:text-gray-200">降低建筑制冷能耗</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-circle text-green-500 text-xs"></i>
-                            <span class="lang-en">Better air quality</span>
-                            <span class="lang-zh">改善空气质量</span>
+                            <span class="lang-en text-gray-900 dark:text-gray-200">Better air quality</span>
+                            <span class="lang-zh text-gray-900 dark:text-gray-200">改善空气质量</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-circle text-green-500 text-xs"></i>
-                            <span class="lang-en">Improved wellbeing</span>
-                            <span class="lang-zh">提升居民福祉</span>
+                            <span class="lang-en text-gray-900 dark:text-gray-200">Improved wellbeing</span>
+                            <span class="lang-zh text-gray-900 dark:text-gray-200">提升居民福祉</span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 card-hover">
                     <div class="text-4xl mb-4">📊</div>
-                    <h4 class="text-xl font-semibold mb-3">
+                    <h4 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">
                         <span class="lang-en">Why Science Matters</span>
                         <span class="lang-zh">科学依据的重要性</span>
                     </h4>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                    <p class="text-gray-900 dark:text-gray-200 text-sm mb-4">
                         <span class="lang-en">Precise measurement of each mechanism's contribution enables optimized urban greening strategies</span>
                         <span class="lang-zh">通过精确测量不同机制的贡献，我们可以优化城市绿化策略</span>
                     </p>
                     <ul class="space-y-2 text-sm">
                         <li class="flex items-center gap-2">
-                            <i class="fas fa-circle text-blue-500 text-xs"></i>
-                            <span class="lang-en">Optimal tree selection</span>
-                            <span class="lang-zh">选择最优树种配置</span>
+                            <i class="fas fa-circle text-gray-800 dark:text-gray-300 text-xs"></i>
+                            <span class="lang-en text-gray-900 dark:text-gray-200">Optimal tree selection</span>
+                            <span class="lang-zh text-gray-900 dark:text-gray-200">选择最优树种配置</span>
                         </li>
                         <li class="flex items-center gap-2">
-                            <i class="fas fa-circle text-blue-500 text-xs"></i>
-                            <span class="lang-en">ROI evaluation</span>
-                            <span class="lang-zh">评估投资回报率</span>
+                            <i class="fas fa-circle text-gray-800 dark:text-gray-300 text-xs"></i>
+                            <span class="lang-en text-gray-900 dark:text-gray-200">ROI evaluation</span>
+                            <span class="lang-zh text-gray-900 dark:text-gray-200">评估投资回报率</span>
                         </li>
                         <li class="flex items-center gap-2">
-                            <i class="fas fa-circle text-blue-500 text-xs"></i>
-                            <span class="lang-en">Policy guidance</span>
-                            <span class="lang-zh">制定政策建议</span>
+                            <i class="fas fa-circle text-gray-800 dark:text-gray-300 text-xs"></i>
+                            <span class="lang-en text-gray-900 dark:text-gray-200">Policy guidance</span>
+                            <span class="lang-zh text-gray-900 dark:text-gray-200">制定政策建议</span>
                         </li>
                     </ul>
                 </div>
@@ -1085,11 +1085,11 @@
     <section id="team" class="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
                     <span class="lang-en">Team & Collaboration</span>
                     <span class="lang-zh">团队协作</span>
                 </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                <p class="text-lg text-gray-900 dark:text-gray-200 max-w-2xl mx-auto">
                     <span class="lang-en">Open, collaborative, sharing—we welcome researchers, developers, and science communication volunteers</span>
                     <span class="lang-zh">开放、协作、共享——我们欢迎研究者、开发者、科普志愿者加入</span>
                 </p>
@@ -1098,22 +1098,22 @@
             <!-- Core Stats -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 <div class="bg-white dark:bg-gray-900 rounded-lg p-6 text-center border border-gray-200 dark:border-gray-700">
-                    <div class="text-4xl font-bold text-primary-600 mb-2">3</div>
-                    <div class="text-sm text-gray-500">
+                    <div class="text-4xl font-bold text-accent mb-2">3</div>
+                    <div class="text-sm text-gray-900 dark:text-gray-300">
                         <span class="lang-en">Core Members</span>
                         <span class="lang-zh">核心成员</span>
                     </div>
                 </div>
                 <div class="bg-white dark:bg-gray-900 rounded-lg p-6 text-center border border-gray-200 dark:border-gray-700">
-                    <div class="text-4xl font-bold text-primary-600 mb-2">1</div>
-                    <div class="text-sm text-gray-500">
+                    <div class="text-4xl font-bold text-accent mb-2">1</div>
+                    <div class="text-sm text-gray-900 dark:text-gray-300">
                         <span class="lang-en">Partner Organizations</span>
                         <span class="lang-zh">合作单位</span>
                     </div>
                 </div>
                 <div class="bg-white dark:bg-gray-900 rounded-lg p-6 text-center border border-gray-200 dark:border-gray-700">
-                    <div class="text-4xl font-bold text-primary-600 mb-2">100%</div>
-                    <div class="text-sm text-gray-500">
+                    <div class="text-4xl font-bold text-accent mb-2">100%</div>
+                    <div class="text-sm text-gray-900 dark:text-gray-300">
                         <span class="lang-en">Open Source</span>
                         <span class="lang-zh">开源共享</span>
                     </div>
@@ -1121,22 +1121,22 @@
             </div>
 
             <!-- Get Involved -->
-            <div class="bg-primary-50 dark:bg-primary-900/20 rounded-xl p-8 border border-primary-200 dark:border-primary-800">
-                <h3 class="text-2xl font-bold mb-6">
+            <div class="bg-accent/5 dark:bg-accent/10 rounded-xl p-8 border border-accent/20">
+                <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
                     <span class="lang-en">Interested in the Research?</span>
                     <span class="lang-zh">对研究感兴趣？</span>
                 </h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-6">
+                <p class="text-gray-900 dark:text-gray-200 mb-6">
                     <span class="lang-en">We welcome research collaborators, data analysts, and science communication volunteers to join our network</span>
                     <span class="lang-zh">我们欢迎研究合作者、数据分析师和科普志愿者的加入</span>
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="mailto:contact@evashade.org" class="group glow-effect inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-full transition-all duration-300 hover:scale-105">
+                    <a href="mailto:contact@evashade.org" class="group glow-effect inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-white font-semibold rounded-full transition-all duration-300 hover:scale-105">
                         <i class="fas fa-envelope"></i>
                         <span class="lang-en">Contact Us</span>
                         <span class="lang-zh">联系我们</span>
                     </a>
-                    <a href="https://github.com/OpenQwert" target="_blank" class="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-full transition-all duration-300 hover:bg-white/10 hover:scale-105">
+                    <a href="https://github.com/OpenQwert" target="_blank" class="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 border border-white/10 text-gray-900 dark:text-white font-semibold rounded-full transition-all duration-300 hover:bg-white/10 hover:scale-105">
                         <i class="fab fa-github"></i>
                         <span class="lang-en">GitHub Repository</span>
                         <span class="lang-zh">GitHub 仓库</span>
@@ -1152,11 +1152,11 @@
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div>
                     <h4 class="font-semibold mb-4 text-white font-serif">EvaShade</h4>
-                    <p class="text-sm text-gray-500">
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
                         <span class="lang-en">EvaShade = Evapotranspiration + Shade</span>
                         <span class="lang-zh">EvaShade = 蒸散发 + 遮荫</span>
                     </p>
-                    <p class="text-sm text-gray-500 mt-3">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-3">
                         <span class="lang-en">Dedicated to understanding vegetation's role in moderating urban thermal environments.</span>
                         <span class="lang-zh">致力于理解植被对城市热环境的调节机制。</span>
                     </p>
@@ -1166,10 +1166,10 @@
                         <span class="lang-en">Research Projects</span>
                         <span class="lang-zh">研究项目</span>
                     </h4>
-                    <ul class="space-y-3 text-sm text-gray-500">
-                        <li><a href="#" class="hover:text-primary transition-colors"><span class="lang-en">ET Cooling Mechanism</span><span class="lang-zh">蒸散发降温机制</span></a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors"><span class="lang-en">Shade Effects</span><span class="lang-zh">遮荫效应研究</span></a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors"><span class="lang-en">Urban Heat Island</span><span class="lang-zh">城市热岛缓解</span></a></li>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-accent transition-colors"><span class="lang-en">ET Cooling Mechanism</span><span class="lang-zh">蒸散发降温机制</span></a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors"><span class="lang-en">Shade Effects</span><span class="lang-zh">遮荫效应研究</span></a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors"><span class="lang-en">Urban Heat Island</span><span class="lang-zh">城市热岛缓解</span></a></li>
                     </ul>
                 </div>
                 <div>
@@ -1177,10 +1177,10 @@
                         <span class="lang-en">Resources</span>
                         <span class="lang-zh">资源</span>
                     </h4>
-                    <ul class="space-y-3 text-sm text-gray-500">
-                        <li><a href="#" class="hover:text-primary transition-colors"><span class="lang-en">Publications</span><span class="lang-zh">发表论文</span></a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors"><span class="lang-en">Open Data</span><span class="lang-zh">开放数据</span></a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors"><span class="lang-en">Experimental Protocol</span><span class="lang-zh">实验方案</span></a></li>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-accent transition-colors"><span class="lang-en">Publications</span><span class="lang-zh">发表论文</span></a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors"><span class="lang-en">Open Data</span><span class="lang-zh">开放数据</span></a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors"><span class="lang-en">Experimental Protocol</span><span class="lang-zh">实验方案</span></a></li>
                     </ul>
                 </div>
                 <div>
@@ -1189,16 +1189,16 @@
                         <span class="lang-zh">联系我们</span>
                     </h4>
                     <div class="flex gap-4">
-                        <a href="https://github.com/OpenQwert" target="_blank" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-500 hover:text-white hover:bg-white/10 transition-all">
+                        <a href="https://github.com/OpenQwert" target="_blank" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-white hover:bg-white/10 transition-all">
                             <i class="fab fa-github text-lg"></i>
                         </a>
-                        <a href="mailto:contact@evashade.org" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-500 hover:text-white hover:bg-white/10 transition-all">
+                        <a href="mailto:contact@evashade.org" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-white hover:bg-white/10 transition-all">
                             <i class="fas fa-envelope text-lg"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-white/5 pt-8 text-center text-sm text-gray-600">
+            <div class="border-t border-white/5 pt-8 text-center text-sm text-gray-500 dark:text-gray-400">
                 <p>© 2026 EvaShade Research Team. Licensed under MIT License.</p>
             </div>
         </div>
@@ -1291,7 +1291,7 @@
                     : ['遮荫降温', '蒸散发降温', '交互效应'],
                 datasets: [{
                     data: [1.8, 4.2, 0.5],
-                    backgroundColor: ['#D4AF37', '#C9A961', '#8B7355'],
+                    backgroundColor: ['#6B7280', '#10B981', '#059669'],
                     borderWidth: 2,
                     borderColor: getChartColors().background
                 }]
